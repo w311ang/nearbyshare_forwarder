@@ -1,0 +1,2 @@
+# nearbyshare_forwarder
+解决附近分享在系统分享菜单中消失的问题
