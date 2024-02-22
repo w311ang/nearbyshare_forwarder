@@ -9,7 +9,7 @@ public class ShareActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 		//Toast.makeText(getApplication(), "hi.", Toast.LENGTH_SHORT).show();
-        //super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_share);
 
         // 获取原始的分享Intent
@@ -23,6 +23,7 @@ public class ShareActivity extends AppCompatActivity {
         // 尝试启动Nearby Share
         try {
             startActivity(originalIntent);
+			finish();
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, "无法找到Nearby Share来分享内容", Toast.LENGTH_SHORT).show();
         }
